@@ -1,22 +1,19 @@
 package com.codecool.interfacews;
 
 import java.util.ArrayList;
+import java.util.List;
+import static com.codecool.interfacews.UncleBen.*;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Bird myBirdOne = new Bird("Tuki", true);
-        Bird myBirdTwo = new Bird("Sunny", false);
-        LadyBird myLadyBirdOne = new LadyBird("Charlie", false);
-        LadyBird myLadyBirdTwo = new LadyBird("Angel", true);
-        myBirdOne.fly();
-        myBirdTwo.fly();
-        myLadyBirdOne.fly();
-        myLadyBirdTwo.fly();
-        myBirdOne.feed();
-        myBirdTwo.feed();
-        myLadyBirdOne.feed();
-        myLadyBirdTwo.feed();
+        List<Bird> myBirds = new ArrayList<>();
+        myBirds.add(new Bird("Tuki", true));
+        myBirds.add(new Bird("Sunny", false));
+//        myBirds.add(new LadyBird("Charlie", false));
+//        myBirds.add(new LadyBird("Angel", true));
+        feedBirds(myBirds);
+
     }
 }
